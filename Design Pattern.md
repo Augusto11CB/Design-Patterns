@@ -1,5 +1,12 @@
 
 # Design Patterns
+## Design Principles
+* A class should have only one reason to change.
+
+
+**POINTS TO BE CONCERNED**
+* Avoid encapsulation violation - Do not make a class that directly access another class field. Also, the "client" class does not need to know how something is done or how something is inside an "service" class.
+* Bound code to concentrate classes - Avoid implement something bound to the concrete version of classes. Prefer use interfaces to work with
 
 Generally speaking, there are three main categories of Design Patterns. They are:
   - Creational Patterns
@@ -8,7 +15,7 @@ Generally speaking, there are three main categories of Design Patterns. They are
   - Behavioral Patterns -
 It defines how objects distribute work, how an object performs a single cohesive function and how different/independent objects work towards a common goal. (Race team trying to win the race).
 
-## Creational Pattern
+## Creational Patterns
 ### Singleton
 
 ### Factory Method Pattern
@@ -35,7 +42,7 @@ By placing all my creation code in one object or method, It avoids duplication i
 # Todo - put the printscreen 
 
 
-## Structural Pattern
+## Structural Patterns
 
 ### Facade Pattern
 
@@ -65,3 +72,44 @@ Imagine that the adaptee classes area thirdy-party libraries that we may not hav
 - translate the client's requesto in to one that is expected by the adaptee
 - reuse adaptee with other client's that have incompatible interfaces
 
+### Proxy Pattern
+The proxy pattern provides a place holder for another object to control access to it.
+
+#### Proxy Pattern - Variations
+1. Remote Proxy - a remote proxy controls access to a remote object.
+2. Virtual Proxy - A virtual proxy controls access to a resource that is expensive to create.
+3. Protection Proxy - A protection proxy controls access to a resource based on access rights.
+
+**How does the proxy pattern works?**
+There is a Subject, which provides an interface for the RealSubject and the Proxy. By implementing the same interface, the Proxy can be substituted for the RealSubject anywhere it occurs.
+
+The RealSubject is the object that does the real work. It’s the object that the Proxy represents and controls access to.
+
+The Proxy holds a reference to the RealSubject. In some cases, the Proxy may be responsible for creating and destroying the RealSubject. Clients interact with the RealSubject through the Proxy.
+
+**[Use Case] Virtual Proxy - CD Cover Implementation**
+Consider a music application of music that holds several albums. Every time that an album is played its cd cover is displayed in the screen. The cover is retrieved from the server via internet. 
+
+If the internet connection is slow while the cover is being downloaded an message will be stand in of the cover. This action will be performed by a virtual proxy. 
+
+### Composite Design Pattern
+Goals:
+* Compose nested structures of projects
+* deal with the classes for these objects uniformly
+* 
+
+## Behavioral Patterns
+
+### Iterator Pattern
+Provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
+
+** Delegating Responsibility**
+The key idea is to take the responsibility for **access and traversal** out of the aggregate object and put it into an Iterator object that defines a standard traversal protocol.
+
+**Removes the responsibility of traversing from the aggregate class and move it into an iterator**
+
+#### See ListIterator Java - > it is an iterator that can go backwards
+
+** Writing polymorphism code with Iterators **
+It is possible to write “polymorphic code” using an iterator;
+When methods are written and take Iterators as parameters, polymorphic iteration is being used. That means we are creating code that can iterate over any collection as long as it supports Iterator. We don’t care about how the collection is implemented, we can still write code to iterate over it.
