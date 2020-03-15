@@ -112,6 +112,8 @@ The Composite Pattern allows you to compose objects into tree structures to repr
 The composite pattern can be understood as a tree structure with nodes that contain leaves that are the minor component of the tree or other nodes.
 
 ![Composite Pattern Diagram](wiki/DiagramCompositePattern.png)
+
+
 **WARNING!!**
 All components must implement the Component interface; however, because leaves and nodes have different roles we can’t always define a default implementation for each method that makes sense. Sometimes the best you can do is throw a runtime exception.
 
