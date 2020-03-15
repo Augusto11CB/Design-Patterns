@@ -48,6 +48,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/composite/composite/iterator" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -56,7 +57,48 @@
     <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
-  <component name="RunManager" selected="Application.RunApplication">
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="composite" />
+      <recent name="composite.composite.iterator" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="composite.composite.iterator" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\AsusAugusto\Documents\DesignPatterns\DesignPatterns\src\main\java\composite\composite\iterator" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.DJTestDriveCompositeIterator">
+    <configuration name="DJTestDrive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="composite.DJTestDrive" />
+      <module name="DesignPatterns.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="composite.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DJTestDriveCompositeIterator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="composite.composite.iterator.DJTestDriveCompositeIterator" />
+      <module name="DesignPatterns.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="composite.composite.iterator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RunApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="RunApplication" />
       <module name="DesignPatterns.main" />
@@ -85,6 +127,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DJTestDrive" />
+        <item itemvalue="Application.DJTestDriveCompositeIterator" />
+        <item itemvalue="Application.DJTestDriveCompositeIterator" />
         <item itemvalue="Application.RunApplication" />
         <item itemvalue="Gradle.DesignPatterns [dependencies]" />
       </list>
@@ -108,37 +153,108 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="175" y="0" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1584294523070" />
-    <state x="444" y="6" key="#com.intellij.ide.util.MemberChooser" timestamp="1584297701666">
+    <state x="137" y="12" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584301541658">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="444" y="6" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1584297701666" />
+    <state x="137" y="12" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1584301541658" />
+    <state x="444" y="6" key="#com.intellij.ide.util.MemberChooser" timestamp="1584300398876">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="444" y="6" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1584300398876" />
     <state x="363" y="79" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1584293749961">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="363" y="79" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1584293749961" />
+    <state x="174" y="275" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1584299957102">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="174" y="275" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1584299957102" />
+    <state x="449" y="223" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1584299958220">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="449" y="223" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1366.728@0.0.1366.728" timestamp="1584299958220" />
     <state x="412" y="47" key="FileChooserDialogImpl" timestamp="1584295176480">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="412" y="47" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584295176480" />
-    <state width="1311" height="166" key="GridCell.Tab.0.bottom" timestamp="1584295782262">
+    <state width="1311" height="250" key="GridCell.Tab.0.bottom" timestamp="1584303900594">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1311" height="166" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584295782262" />
-    <state width="1311" height="166" key="GridCell.Tab.0.center" timestamp="1584295782262">
+    <state width="1311" height="250" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584303900594" />
+    <state width="1311" height="250" key="GridCell.Tab.0.center" timestamp="1584303900594">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1311" height="166" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584295782262" />
-    <state width="1311" height="166" key="GridCell.Tab.0.left" timestamp="1584295782262">
+    <state width="1311" height="250" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584303900594" />
+    <state width="1311" height="250" key="GridCell.Tab.0.left" timestamp="1584303900593">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1311" height="166" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584295782262" />
-    <state width="1311" height="166" key="GridCell.Tab.0.right" timestamp="1584295782262">
+    <state width="1311" height="250" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584303900593" />
+    <state width="1311" height="250" key="GridCell.Tab.0.right" timestamp="1584303900594">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1311" height="166" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584295782262" />
+    <state width="1311" height="250" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584303900594" />
+    <state width="1311" height="345" key="GridCell.Tab.1.bottom" timestamp="1584303353252">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1311" height="345" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584303353252" />
+    <state width="1311" height="345" key="GridCell.Tab.1.center" timestamp="1584303353252">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1311" height="345" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1584303353252" />
+    <state width="1311" height="345" key="GridCell.Tab.1.left" timestamp="1584303353251">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1311" height="345" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1584303353251" />
+    <state width="1311" height="345" key="GridCell.Tab.1.right" timestamp="1584303353252">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1311" height="345" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1584303353252" />
     <state x="75" y="0" key="SettingsEditor" timestamp="1584295358111">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="75" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584295358111" />
+    <state x="157" y="39" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1584302996289">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="157" y="39" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.728@0.0.1366.728" timestamp="1584302996289" />
+    <state x="0" y="0" width="731" height="728" key="find.popup" timestamp="1584301828280">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="0" y="0" width="731" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1584301828280" />
+    <state x="255" y="159" key="run.anything.popup" timestamp="1584301881253">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="255" y="159" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1584301881253" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/composite/composite/iterator/CompositeIterator.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/composite/composite/iterator/CompositeIterator.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/composite/composite/iterator/PlayList.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/composite/composite/iterator/Song.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/composite/composite/iterator/DJ.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
