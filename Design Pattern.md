@@ -73,7 +73,7 @@ Imagine that the adaptee classes area thirdy-party libraries that we may not hav
 - reuse adaptee with other client's that have incompatible interfaces
 
 ### Proxy Pattern
-The proxy pattern provides a place holder for another object to control access to it.
+The proxy pattern provides a place holder for another object to control access to it. The proxy pattern leverages the polymorphism so that the client class can expect the same interface for the proxy and the real subject class
 
 #### Proxy Pattern - Variations
 1. Remote Proxy - a remote proxy controls access to a remote object.
@@ -106,6 +106,9 @@ By combining aggregation and polymorphism, we can recursively invoke the same be
 **Goals**
 * Compose nested structures of projects
 * deal with the classes for these objects uniformly
+
+**Problem**
+Application needs to manipulate a hierarchical collection of "primitive" and "composite" objects. Processing of a primitive object is handled one way, and processing of a composite object is handled differently. **Having to query the "type" of each object before attempting to process it is not desirable**.
 
 The Composite Pattern allows you to compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
 
