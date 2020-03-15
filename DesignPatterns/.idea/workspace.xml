@@ -15,8 +15,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -108,10 +108,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="175" y="0" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1584294523070" />
-    <state x="444" y="6" key="#com.intellij.ide.util.MemberChooser" timestamp="1584296868327">
+    <state x="444" y="6" key="#com.intellij.ide.util.MemberChooser" timestamp="1584297701666">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="444" y="6" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1584296868327" />
+    <state x="444" y="6" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1584297701666" />
     <state x="363" y="79" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1584293749961">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

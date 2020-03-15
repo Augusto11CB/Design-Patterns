@@ -1,6 +1,7 @@
 package composite;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class PlayList implements MusicalComponent {
@@ -35,21 +36,12 @@ public class PlayList implements MusicalComponent {
 
     @Override
     public void play() {
-        char[][] screen = new char[24][78];
-        for (int i = 0; i < 24; ++i)
-            for (int j = 0; j < 78; ++j)
-                screen[i][j] = ' ';
-        double x = 1;
-        double y = 0;
-        for (int i = 0; i < 1000000; ++i) {
-            screen[(int) (y * 10 + 10)][(int) (x * 20 + 38)] = '*';
-            x = x - 1E-5 * y;
-            y = y + 1E-5 * x;
-        }
-        for (int i = 0; i < 24; ++i) {
-            for (int j = 0; j < 78; ++j)
-                java.lang.System.out.print(screen[i][j]);
-            java.lang.System.out.println();
+        System.out.println("Playing the PlayList:" + this.name);
+
+        Iterator<MusicalComponent> iterator = playList.iterator();
+
+        while (iterator.hasNext()){
+            iterator.next().play();
         }
     }
 
