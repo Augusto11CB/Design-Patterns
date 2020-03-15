@@ -92,11 +92,27 @@ Consider a music application of music that holds several albums. Every time that
 
 If the internet connection is slow while the cover is being downloaded an message will be stand in of the cover. This action will be performed by a virtual proxy. 
 
+### Decorator Design Pattern
+Add any number of behavior dynamically to an object at runtime by using **aggregation** as a substitute for pure inheritance. 
+
+Polymorphism - It is achieved by implementing a single interface.
+Aggregation - It lets create a stack of objects.
+
+Each decorator object in the stack is aggregated in a one-to-one relationship with the object below it in the stack.
+
+By combining aggregation and polymorphism, we can recursively invoke the same behavior down the stack and have the behavior executed upwards from the concrete componet object.
+
 ### Composite Design Pattern
-Goals:
+**Goals**
 * Compose nested structures of projects
 * deal with the classes for these objects uniformly
-* 
+
+The Composite Pattern allows you to compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
+
+The composite pattern can be understood as a tree structure with nodes that contain leaves that are the minor component of the tree or other nodes.
+
+**WARNING!!**
+All components must implement the MenuComponent interface; however, because leaves and nodes have different roles we can’t always define a default implementation for each method that makes sense. Sometimes the best you can do is throw a runtime exception.
 
 ## Behavioral Patterns
 
