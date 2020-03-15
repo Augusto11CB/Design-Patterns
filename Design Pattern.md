@@ -134,3 +134,5 @@ The key idea is to take the responsibility for **access and traversal** out of t
 ** Writing polymorphism code with Iterators **
 It is possible to write “polymorphic code” using an iterator;
 When methods are written and take Iterators as parameters, polymorphic iteration is being used. That means we are creating code that can iterate over any collection as long as it supports Iterator. We don’t care about how the collection is implemented, we can still write code to iterate over it.
+
+![Iterator Pattern Diagram](wiki/DiagramIteratorPattern.png)
