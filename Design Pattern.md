@@ -146,3 +146,13 @@ It is possible to write “polymorphic code” using an iterator;
 When methods are written and take Iterators as parameters, polymorphic iteration is being used. That means we are creating code that can iterate over any collection as long as it supports Iterator. We don’t care about how the collection is implemented, we can still write code to iterate over it.
 
 ![Iterator Pattern Diagram](wiki/DiagramIteratorPattern.png)
+
+### Template Method
+The template method defines an algorithm's steps generally in the superclass, but lets subclasses overide specific steps of the algorithm without changing its structure. This pattern is concerned with the assignment of responsibilities.
+
+
+## References
+[Refactoring Guru](https://refactoring.guru/)
+[Source Making](https://sourcemaking.com/)
+Freeman, Robson, Bates and Sierra, ed. Head First: Design Patterns.
+
