@@ -50,7 +50,7 @@ The facade pattern does not add new functionalities, but it acts as a point of e
 
 This is done by encapsulating the subsystem classes into a Facade class, and then hiding them from the client classes so that the clients do not know about the details of the subsystem.
 
-#### Facade Pattern Definitions
+**Facade Pattern Definitions**
 - Is a means to **hide the complexity** of a subsystem by **encapsulating** it behind a unifying wrapper called a facade class
 - Removes the need for client classes to manage a subsystem on their own, resulting in less coupling between the subsystem and the client classes
 - Handles instantiation and redirection of tasks to the appropriate class within the subsystem
@@ -59,23 +59,26 @@ This is done by encapsulating the subsystem classes into a Facade class, and the
 **What are the key design principles are used to implement the facade design pattern?**
 Encapsulation, information hiding, separation of concerns
 
+![Facade Pattern Diagram](wiki/DiagramFacadePattern.png)
+
 ### Adapter Pattern 
 The adapter essentially encapsulates a class X (adaptee) and presents a new interface, or appearance, to a client class that have to use functionalities from the adaptee class and cannot interect with that directly. It does this by wrapping the adaptee’s interface and exposing a new target interface that makes sense to the client. 
-
 
 **So, if two interfaces are incompatible, why don't we just change one or even both, so that they are able to talk to each other?**
 Imagine that the adaptee classes area thirdy-party libraries that we may not have access to, but if we did have access to those libraries an update in their code could break the existing code in other parts in our system that also iteracts with those libraries.
 
-#### Adapter Pattern Definitions
+**Adapter Pattern Definitions**
 - wrap the adaptee and expose a target interface to the client.
 - indirectly change the adptee's interface into one that the client is expecting by implementing a target interface
 - translate the client's requesto in to one that is expected by the adaptee
 - reuse adaptee with other client's that have incompatible interfaces
 
+![Adapter Pattern Diagram](wiki/DiagramAdapterPattern.png)
+
 ### Proxy Pattern
 The proxy pattern provides a place holder for another object to control access to it. The proxy pattern leverages the polymorphism so that the client class can expect the same interface for the proxy and the real subject class
 
-#### Proxy Pattern - Variations
+**Proxy Pattern - Variations**
 1. Remote Proxy - a remote proxy controls access to a remote object.
 2. Virtual Proxy - A virtual proxy controls access to a resource that is expensive to create.
 3. Protection Proxy - A protection proxy controls access to a resource based on access rights.
@@ -86,6 +89,8 @@ There is a Subject, which provides an interface for the RealSubject and the Prox
 The RealSubject is the object that does the real work. It’s the object that the Proxy represents and controls access to.
 
 The Proxy holds a reference to the RealSubject. In some cases, the Proxy may be responsible for creating and destroying the RealSubject. Clients interact with the RealSubject through the Proxy.
+
+![Proxy Pattern Diagram](wiki/DiagramProxyPattern.png)
 
 **[Use Case] Virtual Proxy - CD Cover Implementation**
 Consider a music application of music that holds several albums. Every time that an album is played its cd cover is displayed in the screen. The cover is retrieved from the server via internet. 
@@ -101,6 +106,8 @@ Aggregation - It lets create a stack of objects.
 Each decorator object in the stack is aggregated in a one-to-one relationship with the object below it in the stack.
 
 By combining aggregation and polymorphism, we can recursively invoke the same behavior down the stack and have the behavior executed upwards from the concrete componet object.
+
+![Decorator Pattern Diagram](wiki/DiagramDecoratorPattern.png)
 
 ### Composite Design Pattern
 **Goals**
