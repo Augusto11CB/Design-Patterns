@@ -130,6 +130,7 @@ All components must implement the Component interface; however, because leaves a
 
 
 ## Behavioral Patterns
+It defines how objects distribute work, how an object performs a single cohesive function and how different/independent objects work towards a common goal. (Race team trying to win the race).
 
 ### Iterator Pattern
 Provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
@@ -150,6 +151,15 @@ When methods are written and take Iterators as parameters, polymorphic iteration
 ### Template Method
 The template method defines an algorithm's steps generally in the superclass, but lets subclasses overide specific steps of the algorithm without changing its structure. This pattern is concerned with the assignment of responsibilities.
 
+**Problem **
+There are several classes that have significant implementation similarities (some of then practically have the same implementation, although some lines of code are different, as it varies from implementation to implementation), but there is no resuse of common interface or implementation. If a change common to these classes becomes necessary, redundant effort must be expended.
+
+### Chain of Responsibility
+The Chain of Responsibility is a series of handler objects that are linked together. Each handler have methods that are written to handle specific requests.
+
+When a client send a request, the first handler will try process it. If it can process so the flow ends, but if not the first handler will send the request onto the next handler in the chain. This pattern will continues until there is a handler to proccess or until the chain finish. 
+
+This design pattern is intented to avoid coupling the sender to the receiver by giving morer than one object the chance to handler the requests. Whoever send the request does not need to care about who will process the request. It just need to send it to the first handler and hopefully someone in the chain will take care of the request.
 
 ## References
 [Refactoring Guru](https://refactoring.guru/)
