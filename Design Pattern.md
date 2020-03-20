@@ -61,6 +61,8 @@ Encapsulation, information hiding, separation of concerns
 
 ![Facade Pattern Diagram](wiki/DiagramFacadePattern.png)
 
+**Problem**
+
 ### Adapter Pattern 
 The adapter essentially encapsulates a class X (adaptee) and presents a new interface, or appearance, to a client class that have to use functionalities from the adaptee class and cannot interect with that directly. It does this by wrapping the adaptee’s interface and exposing a new target interface that makes sense to the client. 
 
@@ -74,6 +76,8 @@ Imagine that the adaptee classes area thirdy-party libraries that we may not hav
 - reuse adaptee with other client's that have incompatible interfaces
 
 ![Adapter Pattern Diagram](wiki/DiagramAdapterPattern.png)
+
+**Problem**
 
 ### Proxy Pattern
 The proxy pattern provides a place holder for another object to control access to it. The proxy pattern leverages the polymorphism so that the client class can expect the same interface for the proxy and the real subject class
@@ -92,6 +96,8 @@ The Proxy holds a reference to the RealSubject. In some cases, the Proxy may be 
 
 ![Proxy Pattern Diagram](wiki/DiagramProxyPattern.png)
 
+**Problem**
+
 **[Use Case] Virtual Proxy - CD Cover Implementation**
 Consider a music application of music that holds several albums. Every time that an album is played its cd cover is displayed in the screen. The cover is retrieved from the server via internet. 
 
@@ -108,6 +114,8 @@ Each decorator object in the stack is aggregated in a one-to-one relationship wi
 By combining aggregation and polymorphism, we can recursively invoke the same behavior down the stack and have the behavior executed upwards from the concrete componet object.
 
 ![Decorator Pattern Diagram](wiki/DiagramDecoratorPattern.png)
+
+**Problem**
 
 ### Composite Design Pattern
 **Goals**
@@ -140,6 +148,8 @@ The key idea is to take the responsibility for **access and traversal** out of t
 
 **Removes the responsibility of traversing from the aggregate class and move it into an iterator**
 
+**Problem**
+
 #### See ListIterator Java - > it is an iterator that can go backwards
 
 ** Writing polymorphism code with Iterators **
@@ -161,11 +171,18 @@ When a client send a request, the first handler will try process it. If it can p
 
 This design pattern is intented to avoid coupling the sender to the receiver by giving morer than one object the chance to handler the requests. Whoever send the request does not need to care about who will process the request. It just need to send it to the first handler and hopefully someone in the chain will take care of the request.
 
+**Problem**
+
 ### State Pattern
 State design pattern allows an object change its behavior when something happens in its internal state making it change. So the State pattern is a solution to the problem of how to make behavior depend on state.
 
 **When the State Pattern should be used?**
 Change of behavior at run-time depending on the state of the application. Or or context (application context) is characterized by large and numerous case statements that drives the flow of control based on the current state.
+
+**Problem**
+
+### Mediator Pattern
+The Mediator patttern defines an object that encapsulate how a set of objects interact with each other. The pattern restricts direct communications between objects and communications only take place via mediator. By applying this pattern, it is possible to obtain loose coupling and increase the variation of interaction among objects.
 
 
 ## References
