@@ -186,8 +186,12 @@ The Mediator patttern defines an object that encapsulate how a set of objects in
 
 ## References
 [Java design patterns/](https://java-design-patterns.com/patterns/)
+
 [OO Design](https://www.oodesign.com/)
+
 [Refactoring Guru](https://refactoring.guru/)
+
 [Source Making](https://sourcemaking.com/)
+
 Freeman, Robson, Bates and Sierra, ed. Head First: Design Patterns.
 
