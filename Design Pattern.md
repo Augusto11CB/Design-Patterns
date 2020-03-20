@@ -122,9 +122,6 @@ By combining aggregation and polymorphism, we can recursively invoke the same be
 * Compose nested structures of projects
 * deal with the classes for these objects uniformly
 
-**Problem**
-Application needs to manipulate a hierarchical collection of "primitive" and "composite" objects. Processing of a primitive object is handled one way, and processing of a composite object is handled differently. **Having to query the "type" of each object before attempting to process it is not desirable**.
-
 The Composite Pattern allows you to compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
 
 The composite pattern can be understood as a tree structure with nodes that contain leaves that are the minor component of the tree or other nodes.
@@ -135,7 +132,9 @@ The composite pattern can be understood as a tree structure with nodes that cont
 **WARNING!!**
 All components must implement the Component interface; however, because leaves and nodes have different roles we can’t always define a default implementation for each method that makes sense. Sometimes the best you can do is throw a runtime exception.
 
+**Problem**
 
+Application needs to manipulate a hierarchical collection of "primitive" and "composite" objects. Processing of a primitive object is handled one way, and processing of a composite object is handled differently. **Having to query the "type" of each object before attempting to process it is not desirable**.
 
 ## Behavioral Patterns
 It defines how objects distribute work, how an object performs a single cohesive function and how different/independent objects work towards a common goal. (Race team trying to win the race).
@@ -148,8 +147,6 @@ The key idea is to take the responsibility for **access and traversal** out of t
 
 **Removes the responsibility of traversing from the aggregate class and move it into an iterator**
 
-**Problem**
-
 #### See ListIterator Java - > it is an iterator that can go backwards
 
 ** Writing polymorphism code with Iterators **
@@ -157,6 +154,8 @@ It is possible to write “polymorphic code” using an iterator;
 When methods are written and take Iterators as parameters, polymorphic iteration is being used. That means we are creating code that can iterate over any collection as long as it supports Iterator. We don’t care about how the collection is implemented, we can still write code to iterate over it.
 
 ![Iterator Pattern Diagram](wiki/DiagramIteratorPattern.png)
+
+**Problem**
 
 ### Template Method
 The template method defines an algorithm's steps generally in the superclass, but lets subclasses overide specific steps of the algorithm without changing its structure. This pattern is concerned with the assignment of responsibilities.
