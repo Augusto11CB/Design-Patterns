@@ -161,7 +161,16 @@ When a client send a request, the first handler will try process it. If it can p
 
 This design pattern is intented to avoid coupling the sender to the receiver by giving morer than one object the chance to handler the requests. Whoever send the request does not need to care about who will process the request. It just need to send it to the first handler and hopefully someone in the chain will take care of the request.
 
+### State Pattern
+State design pattern allows an object change its behavior when something happens in its internal state making it change. So the State pattern is a solution to the problem of how to make behavior depend on state.
+
+**When the State Pattern should be used?**
+Change of behavior at run-time depending on the state of the application. Or or context (application context) is characterized by large and numerous case statements that drives the flow of control based on the current state.
+
+
 ## References
+[Java design patterns/](https://java-design-patterns.com/patterns/)
+[OO Design](https://www.oodesign.com/)
 [Refactoring Guru](https://refactoring.guru/)
 [Source Making](https://sourcemaking.com/)
 Freeman, Robson, Bates and Sierra, ed. Head First: Design Patterns.
