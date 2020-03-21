@@ -1,8 +1,8 @@
-package state.state.impl;
+package state.BookMachineCase.state.impl;
 
-import state.BookMachine;
-import state.domain.Book;
-import state.state.State;
+import state.BookMachineCase.BookMachine;
+import state.BookMachineCase.domain.Book;
+import state.BookMachineCase.state.State;
 
 public class OutOfStock implements State {
 

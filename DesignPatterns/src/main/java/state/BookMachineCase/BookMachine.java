@@ -1,11 +1,11 @@
-package state;
+package state.BookMachineCase;
 
 import lombok.Data;
-import state.domain.Book;
-import state.state.State;
-import state.state.impl.HasCreditCard;
-import state.state.impl.Idle;
-import state.state.impl.OutOfStock;
+import state.BookMachineCase.domain.Book;
+import state.BookMachineCase.state.State;
+import state.BookMachineCase.state.impl.HasCreditCard;
+import state.BookMachineCase.state.impl.Idle;
+import state.BookMachineCase.state.impl.OutOfStock;
 
 import java.util.Map;
 

@@ -1,4 +1,4 @@
-package state.domain;
+package state.BookMachineCase.domain;
 
 public class Book {
 

@@ -1,6 +1,6 @@
-package state.state;
+package state.BookMachineCase.state;
 
-import state.domain.Book;
+import state.BookMachineCase.domain.Book;
 
 public interface State {
 
