@@ -50,7 +50,7 @@ The facade pattern does not add new functionalities, but it acts as a point of e
 
 This is done by encapsulating the subsystem classes into a Facade class, and then hiding them from the client classes so that the clients do not know about the details of the subsystem.
 
-#### Facade Pattern Definitions
+**Facade Pattern Definitions**
 - Is a means to **hide the complexity** of a subsystem by **encapsulating** it behind a unifying wrapper called a facade class
 - Removes the need for client classes to manage a subsystem on their own, resulting in less coupling between the subsystem and the client classes
 - Handles instantiation and redirection of tasks to the appropriate class within the subsystem
@@ -59,23 +59,30 @@ This is done by encapsulating the subsystem classes into a Facade class, and the
 **What are the key design principles are used to implement the facade design pattern?**
 Encapsulation, information hiding, separation of concerns
 
+![Facade Pattern Diagram](wiki/DiagramFacadePattern.png)
+
+**Problem**
+
 ### Adapter Pattern 
 The adapter essentially encapsulates a class X (adaptee) and presents a new interface, or appearance, to a client class that have to use functionalities from the adaptee class and cannot interect with that directly. It does this by wrapping the adaptee’s interface and exposing a new target interface that makes sense to the client. 
-
 
 **So, if two interfaces are incompatible, why don't we just change one or even both, so that they are able to talk to each other?**
 Imagine that the adaptee classes area thirdy-party libraries that we may not have access to, but if we did have access to those libraries an update in their code could break the existing code in other parts in our system that also iteracts with those libraries.
 
-#### Adapter Pattern Definitions
+**Adapter Pattern Definitions**
 - wrap the adaptee and expose a target interface to the client.
 - indirectly change the adptee's interface into one that the client is expecting by implementing a target interface
 - translate the client's requesto in to one that is expected by the adaptee
 - reuse adaptee with other client's that have incompatible interfaces
 
+![Adapter Pattern Diagram](wiki/DiagramAdapterPattern.png)
+
+**Problem**
+
 ### Proxy Pattern
 The proxy pattern provides a place holder for another object to control access to it. The proxy pattern leverages the polymorphism so that the client class can expect the same interface for the proxy and the real subject class
 
-#### Proxy Pattern - Variations
+**Proxy Pattern - Variations**
 1. Remote Proxy - a remote proxy controls access to a remote object.
 2. Virtual Proxy - A virtual proxy controls access to a resource that is expensive to create.
 3. Protection Proxy - A protection proxy controls access to a resource based on access rights.
@@ -86,6 +93,10 @@ There is a Subject, which provides an interface for the RealSubject and the Prox
 The RealSubject is the object that does the real work. It’s the object that the Proxy represents and controls access to.
 
 The Proxy holds a reference to the RealSubject. In some cases, the Proxy may be responsible for creating and destroying the RealSubject. Clients interact with the RealSubject through the Proxy.
+
+![Proxy Pattern Diagram](wiki/DiagramProxyPattern.png)
+
+**Problem**
 
 **[Use Case] Virtual Proxy - CD Cover Implementation**
 Consider a music application of music that holds several albums. Every time that an album is played its cd cover is displayed in the screen. The cover is retrieved from the server via internet. 
@@ -102,13 +113,14 @@ Each decorator object in the stack is aggregated in a one-to-one relationship wi
 
 By combining aggregation and polymorphism, we can recursively invoke the same behavior down the stack and have the behavior executed upwards from the concrete componet object.
 
+![Decorator Pattern Diagram](wiki/DiagramDecoratorPattern.png)
+
+**Problem**
+
 ### Composite Design Pattern
 **Goals**
 * Compose nested structures of projects
 * deal with the classes for these objects uniformly
-
-**Problem**
-Application needs to manipulate a hierarchical collection of "primitive" and "composite" objects. Processing of a primitive object is handled one way, and processing of a composite object is handled differently. **Having to query the "type" of each object before attempting to process it is not desirable**.
 
 The Composite Pattern allows you to compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
 
@@ -120,9 +132,12 @@ The composite pattern can be understood as a tree structure with nodes that cont
 **WARNING!!**
 All components must implement the Component interface; however, because leaves and nodes have different roles we can’t always define a default implementation for each method that makes sense. Sometimes the best you can do is throw a runtime exception.
 
+**Problem**
 
+Application needs to manipulate a hierarchical collection of "primitive" and "composite" objects. Processing of a primitive object is handled one way, and processing of a composite object is handled differently. **Having to query the "type" of each object before attempting to process it is not desirable**.
 
 ## Behavioral Patterns
+It defines how objects distribute work, how an object performs a single cohesive function and how different/independent objects work towards a common goal. (Race team trying to win the race).
 
 ### Iterator Pattern
 Provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
@@ -139,3 +154,44 @@ It is possible to write “polymorphic code” using an iterator;
 When methods are written and take Iterators as parameters, polymorphic iteration is being used. That means we are creating code that can iterate over any collection as long as it supports Iterator. We don’t care about how the collection is implemented, we can still write code to iterate over it.
 
 ![Iterator Pattern Diagram](wiki/DiagramIteratorPattern.png)
+
+**Problem**
+
+### Template Method
+The template method defines an algorithm's steps generally in the superclass, but lets subclasses overide specific steps of the algorithm without changing its structure. This pattern is concerned with the assignment of responsibilities.
+
+**Problem **
+There are several classes that have significant implementation similarities (some of then practically have the same implementation, although some lines of code are different, as it varies from implementation to implementation), but there is no resuse of common interface or implementation. If a change common to these classes becomes necessary, redundant effort must be expended.
+
+### Chain of Responsibility
+The Chain of Responsibility is a series of handler objects that are linked together. Each handler have methods that are written to handle specific requests.
+
+When a client send a request, the first handler will try process it. If it can process so the flow ends, but if not the first handler will send the request onto the next handler in the chain. This pattern will continues until there is a handler to proccess or until the chain finish. 
+
+This design pattern is intented to avoid coupling the sender to the receiver by giving morer than one object the chance to handler the requests. Whoever send the request does not need to care about who will process the request. It just need to send it to the first handler and hopefully someone in the chain will take care of the request.
+
+**Problem**
+
+### State Pattern
+State design pattern allows an object change its behavior when something happens in its internal state making it change. So the State pattern is a solution to the problem of how to make behavior depend on state.
+
+**When the State Pattern should be used?**
+Change of behavior at run-time depending on the state of the application. Or or context (application context) is characterized by large and numerous case statements that drives the flow of control based on the current state.
+
+**Problem**
+
+### Mediator Pattern
+The Mediator patttern defines an object that encapsulate how a set of objects interact with each other. The pattern restricts direct communications between objects and communications only take place via mediator. By applying this pattern, it is possible to obtain loose coupling and increase the variation of interaction among objects.
+
+
+## References
+[Java design patterns/](https://java-design-patterns.com/patterns/)
+
+[OO Design](https://www.oodesign.com/)
+
+[Refactoring Guru](https://refactoring.guru/)
+
+[Source Making](https://sourcemaking.com/)
+
+Freeman, Robson, Bates and Sierra, ed. Head First: Design Patterns.
+
