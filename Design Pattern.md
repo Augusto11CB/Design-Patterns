@@ -184,8 +184,12 @@ State design pattern allows an object change its behavior when something happens
 **When the State Pattern should be used?**
 Change of behavior at run-time depending on the state of the application. Or or context (application context) is characterized by large and numerous case statements that drives the flow of control based on the current state.
 
-**Problem**
+![Iterator Pattern Diagram](wiki/DiagramStatePattern.png)
 
+**Problem**
+Consider a system designed to be used by a manufacturer of vending machines in its machines. These machines have several states, and specific actions based on those states. For instance, imagine that someone wants to purchase something that is sold on this machine. To do so, this person inserts the money in the machine and chooses a product. 
+Several things might happen until the product be delivered, several actions were performed depending on the current state of the machine ("deliver the product if the amount of money is enough or more"; "if there is no money don't deliver the product", "If there is money, but the product is out of stock return the money.").
+Create code that respects the design principle and keeps the system extensible to include new states is the challenger that the state pattern came to solve.
 
 ### Mediator Pattern
 The Mediator patttern defines an object that encapsulate how a set of objects interact with each other. The pattern restricts direct communications between objects and communications only take place via mediator. By applying this pattern, it is possible to obtain loose coupling and increase the variation of interaction among objects.
