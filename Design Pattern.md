@@ -175,6 +175,7 @@ The Chain of Responsibility is a series of handler objects that are linked toget
 When a client send a request, the first handler will try process it. If it can process so the flow ends, but if not the first handler will send the request onto the next handler in the chain. This pattern will continues until there is a handler to proccess or until the chain finish. 
 
 This design pattern is intented to avoid coupling the sender to the receiver by giving morer than one object the chance to handler the requests. Whoever send the request does not need to care about who will process the request. It just need to send it to the first handler and hopefully someone in the chain will take care of the request.
+![Iterator Pattern Diagram](wiki/DiagramChainOfResponsibilityPattern.png)
 
 **Problem**
 
@@ -187,12 +188,16 @@ Change of behavior at run-time depending on the state of the application. Or or 
 ![Iterator Pattern Diagram](wiki/DiagramStatePattern.png)
 
 **Problem**
+
 Consider a system designed to be used by a manufacturer of vending machines in its machines. These machines have several states, and specific actions based on those states. For instance, imagine that someone wants to purchase something that is sold on this machine. To do so, this person inserts the money in the machine and chooses a product. 
+
 Several things might happen until the product be delivered, several actions were performed depending on the current state of the machine ("deliver the product if the amount of money is enough or more"; "if there is no money don't deliver the product", "If there is money, but the product is out of stock return the money.").
 Create code that respects the design principle and keeps the system extensible to include new states is the challenger that the state pattern came to solve.
 
 ### Mediator Pattern
 The Mediator patttern defines an object that encapsulate how a set of objects interact with each other. The pattern restricts direct communications between objects and communications only take place via mediator. By applying this pattern, it is possible to obtain loose coupling and increase the variation of interaction among objects.
+
+![Iterator Pattern Diagram](wiki/DiagramMediatorPattern.png)
 
 **Problem**
 
