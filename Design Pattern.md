@@ -175,7 +175,7 @@ The Chain of Responsibility is a series of handler objects that are linked toget
 When a client send a request, the first handler will try process it. If it can process so the flow ends, but if not the first handler will send the request onto the next handler in the chain. This pattern will continues until there is a handler to proccess or until the chain finish. 
 
 This design pattern is intented to avoid coupling the sender to the receiver by giving morer than one object the chance to handler the requests. Whoever send the request does not need to care about who will process the request. It just need to send it to the first handler and hopefully someone in the chain will take care of the request.
-![Iterator Pattern Diagram](wiki/DiagramChainOfResponsibilityPattern.png)
+![Chain of Responsibility Pattern Diagram](wiki/DiagramChainOfResponsibilityPattern.png)
 
 **Problem**
 
@@ -185,28 +185,60 @@ State design pattern allows an object change its behavior when something happens
 **When the State Pattern should be used?**
 Change of behavior at run-time depending on the state of the application. Or or context (application context) is characterized by large and numerous case statements that drives the flow of control based on the current state.
 
-![Iterator Pattern Diagram](wiki/DiagramStatePattern.png)
+![State  Pattern Diagram](wiki/DiagramStatePattern.png)
 
 **Problem**
-
 Consider a system designed to be used by a manufacturer of vending machines in its machines. These machines have several states, and specific actions based on those states. For instance, imagine that someone wants to purchase something that is sold on this machine. To do so, this person inserts the money in the machine and chooses a product. 
 
 Several things might happen until the product be delivered, several actions were performed depending on the current state of the machine ("deliver the product if the amount of money is enough or more"; "if there is no money don't deliver the product", "If there is money, but the product is out of stock return the money.").
 Create code that respects the design principle and keeps the system extensible to include new states is the challenger that the state pattern came to solve.
 
+**Solution**
+The State pattern suggests that you create new classes for all possible states of an object and extract all state-specifc  behaviors into these classes. The context () store a reference of the current state and delegates all the state-related work to this reference.
+
+* **State Pattern - Characteristics**
+
+	* Methods map directly to actions that could happen.
+
+	* Classes map directly the possible states
+
 ### Mediator Pattern
 The Mediator patttern defines an object that encapsulate how a set of objects interact with each other. The pattern restricts direct communications between objects and communications only take place via mediator. By applying this pattern, it is possible to obtain loose coupling and increase the variation of interaction among objects.
 
-![Iterator Pattern Diagram](wiki/DiagramMediatorPattern.png)
+![Mediator Pattern Diagram](wiki/DiagramMediatorPattern.png)
 
 **Problem**
 
 ### Command Pattern
-The command pattern working with requests that  are transformed into objects.
+The command pattern working with requests that are transformed into objects. Usually, when one object makes a request for a second object to perform some action, the first need to know which method of the second object call, in this case there are a directly communication with the receiver. 
+
+Instead of having these objects working directly with each other, the **sender** can simply just create a **command object** and letthe command object deal with the work by invoking the **receiver objects**. This way, the sender does not need to know about the receiver and is methods.
 
 
+**Benefits of Command Pattern**
+Command objects can allow you to treat them as the way you treat other objects. There is the possibility to store the command objects into lists, put them onto queues so that it is possible to schedule different commands to be completed at different times and manipulate them before/after they are completed.
 
+**Command pattern is allowing commands to be undone or redone.** Like how actions can be undone or remade in document editor? Suppose that text editing software are being created. There can be many different commands that can be executed in the text editing software like delete text, change font, pixel text and so on. To achieve redo and undo functionality, the software will need two lists, a history list which holds all the commands that have been executed, and a redo list which would be used to put commands that have been undone.
 
+Every time a command is requested, a command object is created and executed. Every time a command is completed, that command goes to the history list.  If the user wanted to undo a command the software would look at the history list and look at the most recent command executed. The software would ask this command to undo itself and then put it on the redo list.
+
+![Command Pattern Diagram](wiki/DiagramCommandPattern.png)
+
+**Problem**
+**Solution**
+
+### Observer Pattern
+Observer pattern proposes a subscription mechanism to notify multiple objects about any events that happen to the object they’re observing.
+
+![Iterator Pattern Diagram](wiki/DiagramObserverPattern.png)
+
+**Problem**
+If there are many objects that rely on the state of one. As an example, consider that there is a new requeriment due to a new disease around the world that all subscribers of WHO healthy blog must be notified always that a news postage is created. 
+
+**Solution**
+![Pattern Solution Blog and Subscriber](wiki/ProblemImageFormalizationObserverPattern.png)
+
+![Iterator Pattern Diagram](wiki/HowWorksObserverPattern.png)
 
 
 ### TODO - Understand Strategy vs State Pattern
