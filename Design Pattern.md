@@ -78,6 +78,12 @@ Imagine that the adaptee classes area thirdy-party libraries that we may not hav
 ![Adapter Pattern Diagram](wiki/DiagramAdapterPattern.png)
 
 **Problem**
+There is a software system that one of its libraries must be replaced by a new one for security reasons, but the new library designed their interfaces differently than the last vendor and it is really hard to change the existing code (and the new library code cannot be changed).
+
+**Solution**
+In order to solve the problem, a class can be written to adapt the new library interface into one that the system are expecting.
+
+
 
 ### Proxy Pattern
 The proxy pattern provides a place holder for another object to control access to it. The proxy pattern leverages the polymorphism so that the client class can expect the same interface for the proxy and the real subject class
@@ -180,8 +186,44 @@ Change of behavior at run-time depending on the state of the application. Or or 
 
 **Problem**
 
+
 ### Mediator Pattern
 The Mediator patttern defines an object that encapsulate how a set of objects interact with each other. The pattern restricts direct communications between objects and communications only take place via mediator. By applying this pattern, it is possible to obtain loose coupling and increase the variation of interaction among objects.
+
+**Problem**
+
+### Command Pattern
+The command pattern working with requests that  are transformed into objects.
+
+
+
+
+
+
+### TODO - Understand Strategy vs State Pattern
+You’ve got a good eye! Yes, the class diagrams are essentially the same, but  
+the two patterns differ in their intent.  
+With the State Pattern, we have a set of behaviors encapsulated in state  
+objects; at any time the context is delegating to one of those states. Over  
+time, the current state changes across the set of state objects to reflect the  
+internal state of the context, so the context’s behavior changes over time as  
+well. The client usually knows very little, if anything, about the state objects.  
+With Strategy, the client usually specifies the strategy object that the context  
+is composed with. Now, while the pattern provides the flexibility to change  
+the strategy object at runtime, often there is a strategy object that is most  
+appropriate for a context object. For instance, in Chapter 1, some of our  
+ducks were configured to fly with typical flying behavior (like mallard  
+ducks), while others were configured with a fly behavior that kept them  
+grounded (like rubber ducks and decoy ducks).  
+In general, think of the Strategy Pattern as a flexible alternative to  
+subclassing; if you use inheritance to define the behavior of a class, then  
+you’re stuck with that behavior even if you need to change it. With Strategy  
+you can change the behavior by composing with a different object.  
+Think of the State Pattern as an alternative to putting lots of conditionals in  
+your context; by encapsulating the behaviors within state objects, you can  
+simply change the state object in context to change its behavior.
+
+
 
 
 ## References
@@ -194,4 +236,6 @@ The Mediator patttern defines an object that encapsulate how a set of objects in
 [Source Making](https://sourcemaking.com/)
 
 Freeman, Robson, Bates and Sierra, ed. Head First: Design Patterns.
-
+ -
+  - Structural Patterns - 
+  - Behavioural Patterns
