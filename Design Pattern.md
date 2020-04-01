@@ -11,10 +11,17 @@
 **TYPES OF DESIGN PATTERNS**
 Generally speaking, there are three main categories of Design Patterns. They are:
   - **Creational Patterns**
-  - **Structural Patterns** 
-Use structural patterns to describe how different objects have a relationship (how they interact with each other). Also, how they should work to achieve a particular goal (how spicy and ingredients work to create a dish)
-  - **Behavioral Patterns**
+  - **Structural Patterns
+Ue structural patterns to describe how different objects have a relationship (how they interact with each other). Also, how they should work to achieve a particular goal (how spicy and ingredients work to create a dish)
+  - **Behavioral Patterns
 It defines how objects distribute work, how an object performs a single cohesive function and how different/independent objects work towards a common goal. (Race team trying to win the race).
+
+## Creational Vs Structural Vs Behavioral 
+**1. Behavioral Patterns:**  These design patterns are specifically concerned with communication between objects.
+
+**2. Creational Patterns:** These design patterns provide ways to create objects while hiding the  _creation logic_, instead of instantiating objects directly using the  `new`  operator. This gives the program more flexibility in deciding which objects need to be created for a given  _use case._
+
+**3. Structural Patterns:**  These design patterns deal with class and object composition. The concept of inheritance is used to compose interfaces and define ways to compose objects to obtain new functionality.
 
 ## Creational Patterns
 ### Singleton
@@ -22,7 +29,7 @@ It defines how objects distribute work, how an object performs a single cohesive
 ### Factory Method Pattern
 The Factory Method Pattern **encapsulates object creation** by **letting subclasses decide what objects to create.**
 
-**What is a factory?**
+*What is a factory?**
 Generally, a factory is a method or an object that creates other objects.
 
 Factories allow the client code operates on generalization. It is called coding to an interface.
@@ -31,11 +38,11 @@ Factories allow the client code operates on generalization. It is called coding 
 If there are multiple clients that want to instantiate the same set of classes, then by using the Factory Method pattern we cut out the redundancy of code and made the code easier to modify (add more type of classes that can be instantiated).
 
 **Factory Object vs Factory Method Pattern**
-In factory method pattern, the creation of an object is separated in a different method. Instead of working with factory objects we specialize the class that uses the factory method.
+In factory method pattern, the creation of an object is separated in a different method. Instead of working with factory objects we specialize the class that uses the factory method
 
 **Creator Classes and Product Classes**
 In the **creator classes** there is an abstract method that the **subclasses implement to produce Products**. 
-(Often the creator class has code that depends on an abstract product which is produced by its subclasses).
+(Often the creator class has code that depends on an abstract product which is produced by it subclasses).
 
 **Summarisation**
 By placing all my creation code in one object or method, It avoids duplication in the code and provide one place to perform maintenance. That also means clients depend only upon interfaces rather than the concrete classes required to instantiate objects. Moreover, this allows me to program to an interface, not an implementation, and that makes my code more flexible and extensible in the future.
@@ -50,7 +57,7 @@ The facade pattern does not add new functionalities, but it acts as a point of e
 
 This is done by encapsulating the subsystem classes into a Facade class, and then hiding them from the client classes so that the clients do not know about the details of the subsystem.
 
-**Facade Pattern Definitions**
+Facade Pattern Definitions**
 - Is a means to **hide the complexity** of a subsystem by **encapsulating** it behind a unifying wrapper called a facade class
 - Removes the need for client classes to manage a subsystem on their own, resulting in less coupling between the subsystem and the client classes
 - Handles instantiation and redirection of tasks to the appropriate class within the subsystem
@@ -69,7 +76,7 @@ The adapter essentially encapsulates a class X (adaptee) and presents a new inte
 **So, if two interfaces are incompatible, why don't we just change one or even both, so that they are able to talk to each other?**
 Imagine that the adaptee classes area thirdy-party libraries that we may not have access to, but if we did have access to those libraries an update in their code could break the existing code in other parts in our system that also iteracts with those libraries.
 
-**Adapter Pattern Definitions**
+Adapter Pattern Definitions**
 - wrap the adaptee and expose a target interface to the client.
 - indirectly change the adptee's interface into one that the client is expecting by implementing a target interface
 - translate the client's requesto in to one that is expected by the adaptee
@@ -83,9 +90,7 @@ There is a software system that one of its libraries must be replaced by a new o
 **Solution**
 In order to solve the problem, a class can be written to adapt the new library interface into one that the system are expecting.
 
-
-
-### Proxy Pattern
+Proxy Pattern
 The proxy pattern provides a place holder for another object to control access to it. The proxy pattern leverages the polymorphism so that the client class can expect the same interface for the proxy and the real subject class
 
 **Proxy Pattern - Variations**
@@ -125,8 +130,11 @@ By combining aggregation and polymorphism, we can recursively invoke the same be
 
 ### Composite Design Pattern
 **Goals**
-* Compose nested structures of projects
-* deal with the classes for these objects uniformly
+* Compose nested structures of objets
+* Deal with these objects uniformly
+
+**Problem**
+Application needs to manipulate a hierarchical collection of "primitive" and "composite" objects. Processing of a primitive object is handled one way, and processing of a composite object is handled differently. **Having to query the "type" of each object before attempting to process it is not desirable**.
 
 The Composite Pattern allows you to compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
 
@@ -137,10 +145,6 @@ The composite pattern can be understood as a tree structure with nodes that cont
 
 **WARNING!!**
 All components must implement the Component interface; however, because leaves and nodes have different roles we can’t always define a default implementation for each method that makes sense. Sometimes the best you can do is throw a runtime exception.
-
-**Problem**
-
-Application needs to manipulate a hierarchical collection of "primitive" and "composite" objects. Processing of a primitive object is handled one way, and processing of a composite object is handled differently. **Having to query the "type" of each object before attempting to process it is not desirable**.
 
 ## Behavioral Patterns
 It defines how objects distribute work, how an object performs a single cohesive function and how different/independent objects work towards a common goal. (Race team trying to win the race).
@@ -225,6 +229,7 @@ Every time a command is requested, a command object is created and executed. Eve
 ![Command Pattern Diagram](wiki/DiagramCommandPattern.png)
 
 **Problem**
+
 **Solution**
 
 ### Observer Pattern
@@ -277,6 +282,4 @@ simply change the state object in context to change its behavior.
 [Source Making](https://sourcemaking.com/)
 
 Freeman, Robson, Bates and Sierra, ed. Head First: Design Patterns.
- -
-  - Structural Patterns - 
-  - Behavioural Patterns
+
